@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="section markdown-content max-w-4xl">
+  <h1 class="xl:-mx-32">{{ page.title }}</h1>
+  <p class="text-center text-sm font-bold mb-8">
+    {{ page.date | date:"%B %e, %Y" }}
+    <a href="{{ post.url }}" class="ml-1">∞</a>
+  </p>
+
+  {{ content }}
+</article>

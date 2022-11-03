@@ -1,0 +1,34 @@
+# Paths
+exclude:
+ - README.md
+ - postcss.config.js
+ - tailwind.config.js
+ - yarn.lock
+ - package.json
+include:
+  - _redirects
+  - _headers
+
+# Plugins
+plugins:
+  - jekyll-archives
+
+# Output
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:title
+jekyll-archives:
+  enabled: [year]
+  permalinks:
+    year: /blog/:year/
+  layouts:
+    year: archive_yearly
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Conversion
+excerpt_separator: '<!--more-->'

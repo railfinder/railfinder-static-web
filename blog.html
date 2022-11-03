@@ -1,0 +1,28 @@
+---
+---
+<div class="section space-y-16">
+  <h1 class="heading-xl text-center">Latest blog posts</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+    {% for post in site.posts limit:6 %}
+    <article class="callout callout-red space-y-8 relative pb-20">
+      <div class="h-32 flex flex-col justify-center text-center space-y-2">
+        <h2 class="heading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="text-sm font-bold">
+          <span>{{ post.date | date:"%B %e, %Y" }}</span>
+          <a href="{{ post.url }}" class="link">∞</a>
+        </p>
+      </div>
+
+      <div class="markdown-content">
+        {{ post.excerpt }}
+      </div>
+
+      <div class="absolute bottom-8 left-0 right-0 text-center"><a href="{{ post.url }}" class="link">Read post</a></div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+
+<aside class="section text-center">
+  <a href="/blog/archives" class="link">See all posts in the archives</a>
+</aside>

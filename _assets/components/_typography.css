@@ -1,0 +1,25 @@
+.heading {
+  @apply text-xl font-semibold;
+}
+
+.heading-lg {
+  @apply text-xl font-semibold lg:text-3xl;
+}
+
+.heading-xl {
+  @apply text-2xl font-bold lg:font-semibold lg:text-5xl;
+}
+
+.list li {
+  @apply relative pl-4;
+}
+
+.list li:before {
+  content: '•';
+
+  @apply absolute left-0 w-4;
+}
+
+.list-numbered {
+  @apply list-decimal pl-6;
+}

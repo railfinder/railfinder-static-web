@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} — {% endif %}Railfinder</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="{% asset main.css %}">
+    {% comment %}<link rel="alternate" type="application/atom+xml" title="Railfinder" href="/atom.xml" />{% endcomment %}
+  </head>
+  <body class="min-h-screen lg:pb-20">
+
+{{ content }}
+
+<script>
+var elements = document.getElementsByClassName("email");
+for (element of elements) {
+  var email = element.innerHTML.replace(/\Wat\W/, "@").replace(/\Wdot\W/m, ".");
+  element.innerHTML = "<a href=\"mailto:" + email + "\">" + email + "</a>";
+}
+</script>
+
+  </body>
+</html>

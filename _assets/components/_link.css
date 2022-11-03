@@ -1,0 +1,7 @@
+.link {
+  @apply underline;
+}
+
+.link:hover {
+  @apply cursor-pointer animate-pulse;
+}

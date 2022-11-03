@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+yarn run build:css
+bundle exec jekyll build

@@ -1,0 +1,7 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Not found
+/* 404.html 404
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://tbd.netlify.app/* https://www.railfinder.eu/:splat 301!

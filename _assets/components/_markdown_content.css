@@ -1,0 +1,39 @@
+.markdown-content h1 {
+  @apply heading-xl text-center;
+}
+
+.markdown-content h2 {
+  @apply heading-lg;
+}
+
+.markdown-content h3 {
+  @apply heading;
+}
+
+.markdown-content ul {
+  @apply list;
+}
+
+.markdown-content ol {
+  @apply list-numbered;
+}
+
+.markdown-content p img {
+  @apply mx-auto;
+
+  max-width: 80%;
+}
+
+.markdown-content hr {
+  @apply border-gray-300 rounded-[1px] border-2 w-3/4 mx-auto my-8;
+}
+
+.markdown-content * + * {
+  @apply mt-4;
+}
+
+.markdown-content * + h1,
+.markdown-content * + h2,
+.markdown-content * + h3 {
+  @apply mt-8;
+}

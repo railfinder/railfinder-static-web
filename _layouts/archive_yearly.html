@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<main class="section max-w-4xl">
+  <h1 class="heading-xl text-center mb-8">Archives for {{ page.date | date: "%Y" }}</h1>
+  <ul class="space-y-4">
+{% for post in page.posts %}
+    <li class="relative">
+      <span class="text-sm font-bold leading-6 md:absolute">{{ post.date | date:"%B %e" }}</span>
+      <a href="{{ post.url }}" class="inline-block md:pl-24 link">
+        {{ post.title }}
+      </a>
+    </li>
+{% endfor %}
+  </ul>
+  <p class="mt-8 text-center">
+    <a href="/blog/archives" class="link">See archives for all years</a>
+  </p>
+  </div>
+</main>
